@@ -1,38 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  overflow-y: auto;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.chat-screen {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  background: #FAF9F4;
+  z-index: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chat-item {
+  margin-bottom: 20px;
+}
+
+.chat-header {
+  font-weight: bold;
+}
+
+.chat-content {
+  margin-top: 10px;
+  box-shadow: 2px 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+.top-bar{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.top-bar img{
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-self: center;
+}
+.top-bar h1{
+  margin: 0;
+  padding: 0;
+}
+span{
+  color: grey;
+}
+.chat-info{
+  display: flex;
+  justify-content: space-between;
+}
+.chat-info img{
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-self: center;
+  
+}
+.about{
+  font-size: small;
+}
+.chats{
+  
+  margin-top: 1rem;
+  overflow-y: scroll;
+  height: 65vh;
+}
+.chat-item{
+  display: flex;
+}
+.chat-img img{
+  border-radius: 50rem;
+  height: 2rem;
+  margin-right:1rem;
+}
+form{
+  display: flex;
+  width: 100%;
+}
+.chat-input{
+  background: white;
+}
+.chat-input input{
+  border: none;
+  width:70%;
+  padding: 0.6rem;
+  border-radius: 1rem;
+  padding-bottom: 2rem;
+  
+}
+.chat-input button{
+  border: none;
+}
+.buttons{
+  width: fit-content;
+  height: fit-content;
+  align-self: center;
+  display: flex;
+  gap: 2rem;
+}
+.popup {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-left: 65%;
+  margin-bottom: 1rem;
+}
+
+.popup-content {
+  position:absolute;
+  display: flex;
+  background-color: green;
+  z-index: 1;
+  padding: 10px;
+  
+  border-radius: 1rem;
+  gap: 1rem;
+}
+.popup-content h2 {
+  margin-top: 0;
+}
+
+.popup-content p {
+  margin-bottom: 10px;
+}
+
+.popup-content button {
+  margin-top: 10px;
 }
