@@ -32,11 +32,18 @@ body{
   box-shadow: 2px 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   border-radius: 1rem;
   padding: 0.5rem;
+  
+  white-space: pre-wrap;
+
 }
 .top-bar{
   display: flex;
   gap: 1rem;
   justify-content: space-between;
+}
+.left-top{
+  display: flex;
+  gap: 1rem;
 }
 .top-bar img{
   width: fit-content;
@@ -53,23 +60,39 @@ span{
 }
 .chat-info{
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
+  padding: 4px;
 }
 .chat-info img{
   width: fit-content;
   height: fit-content;
   display: flex;
   align-self: center;
-  
 }
 .about{
+  display: flex;
+  margin-top: 0.5rem;
   font-size: small;
+  gap: 1rem;
+}
+.about h3{
+ margin: 0;
 }
 .chats{
-  
-  margin-top: 1rem;
   overflow-y: scroll;
   height: 65vh;
+}
+.chats p{
+  margin-top: 8rem;
+  width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #999999; 
+   line-height: 0.1em;
+   
+}
+p span { 
+  background:#FAF9F4; 
+  padding:0 10px; 
 }
 .chat-item{
   display: flex;
@@ -90,11 +113,17 @@ form{
   border: none;
   width:70%;
   padding: 0.6rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
   padding-bottom: 2rem;
   
 }
 .chat-input button{
+  border: none;
+}
+input:hover{
+  border: none;
+}
+input:focus{
   border: none;
 }
 .buttons{

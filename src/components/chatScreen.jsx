@@ -26,7 +26,7 @@ const ChatScreen = () => {
 
   const loadChats = async () => {
     try {
-      const response = await axios.get(`http://3.111.128.67/assignment/chat?page=0`)
+      const response = await axios.get(`https://qa.corider.in/assignment/chat?page=0`)
       setChats(response.data.chats);
       setUser(response.data);
     
@@ -41,14 +41,19 @@ const ChatScreen = () => {
     <div  className="chat-screen" >
         <div>
             <div className="top-bar">
+              <div className='left-top'>
             <img src={back} alt="" />
             <h1>{user.name}</h1>
+            </div>
+            
             <img src={edit} alt="" />
+            
             </div>
             <div className='chat-info'>
+            <div className='about'>
             <img src={Group} alt="" />
-                <div className='about'>
-                  
+                
+                  <div>
             <h3>
                 <span> From</span> {user.from}
             </h3>
@@ -56,10 +61,14 @@ const ChatScreen = () => {
                <span> To</span> {user.to}
             </h3>
             </div>
+            </div>
             <img src={dots} alt="" />
             </div>
         </div>
         <div ref={divRef} className='chats'>
+          
+          <p><span>12 JAN, 2023</span></p>
+          
       {chats.map(chat => (
         <div  key={chat.id} className="chat-item" >
           <div className="chat-img" style={{ display: chat.sender.self ? 'none' : 'block' }}><img src={chat.sender.image} alt="" /></div>
